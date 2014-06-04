@@ -1,19 +1,3 @@
-<!doctype html> 
-<html lang="en"> 
-<head> 
-	<meta charset="UTF-8" />
-	<title>Phaser - Platformer with Camera</title>
-	<script type="text/javascript" src="js/phaser.min.js"></script>
-    <style type="text/css">
-        body {
-            margin: 0;
-        }
-    </style>
-</head>
-<body>
-
-<script type="text/javascript">
-
 var game = new Phaser.Game(800, 600, Phaser.AUTO, '', { preload: preload, create: create, update: update});
 
 function preload() {
@@ -47,9 +31,9 @@ function create() {
     player.body.collideWorldBound=true;
     player.animations.add('left',[0,1,2,3],10,true);
     player.animations.add('right',[5,6,7,8],10,true);
-    cursors=game.input.keyboard.createCursorKeys();
+    cursors = game.input.keyboard.createCursorKeys();
     game.world.setBounds(0, 0, 1400, 300);
-    	var emitter = game.add.emitter(game.world.centerX, 0, 400);
+    var emitter = game.add.emitter(game.world.centerX, 0, 400);
 
 	emitter.width = 2000;
 
@@ -96,8 +80,3 @@ function update() {
     }
 
 }
-
-</script>
-
-</body>
-</html>
